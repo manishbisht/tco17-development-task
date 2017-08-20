@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Sample website using Bootstrap and ExpressJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">TCO17 - DigitalOcean Login</a>
+        </div>
+    </div>
+</nav>
+<div id="ss"></div>
+<script>
+    var data = '';
+    $.ajax({
+        url: 'https://cloud.digitalocean.com/v1/oauth/token?client_id=80cfc4c4824c0df66fa472a5b7f859ce4f3fcc797a41dc9860807116723bf106&client_secret=b76e65fbbc6ae06c06eeb74077f4b41a2bf122ab10493b5919b0eea81053d127&grant_type=authorization_code&code=' + $.cookie("code") + '&redirect_uri=http://localhost:8083/home',
+        type: "POST",
+        success: function (data) {
+            alert('sas');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Steps to run the application
+1. Open the URL http://139.59.15.184:8082/ to see the utput for Level 0
